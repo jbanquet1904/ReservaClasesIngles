@@ -4,8 +4,8 @@ import {colors,radius,spacing,typography} from '../theme/index'
 
 export default function LabelLevel({ level }){
     return(
-        <View style={[styles.container, {backgroundColor: colors.background}]}>
-            <Text style={styles.text}> { level } </Text>
+        <View style={[style.container, {backgroundColor: colors.background}]}>
+            <Text style={style.text}> { level } </Text>
         </View>
     )
 }
