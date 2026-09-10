@@ -1,33 +1,46 @@
-import React, {useState,useEffect} from "react";
-import { View, Text, Image, Pressable, StyleSheet, TextInput, ScrollView} from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import React, {useState,useMemo} from "react";
+import { View, Text, Image, Pressable, StyleSheet, TextInput, ScrollView, FlatList} from "react-native";
+
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import LabelLevel from "../components/LabelLevel";
+import { Ionicons } from "@expo/vector-icons";
+
+import LabelLevel from '../components/LabelLevel';
+import ChipLevel from '../components/ChipLevel';
+import card from '../components/Card';
+
 import { colors,radius, spacing,typography } from '../theme/index'
 import {formatPrice, CLASES, NIVELES} from '../data/clases'
-import ChipLevel from "../components/ChipLevel";
+import Card from "../components/Card";
+
 
 
 export default function StartScreen ({navigation}){
 
     const insets = useSafeAreaInsets();
 
-    const[level, setLevel] = useState('All');
-    const[search,setSearch] = useState('');
+    const [level, setLevel] = useState('All');
+    const [search,setSearch] = useState('');
+    const Resultados = useMemo(()=>{
+        const textSearch = search.trim().toLowerCase();
+        return CLASES.filter((clase)=>{
+            const coincideLevel = level === 'All' || clase.level === level;
+            const TextCoincide = textSearch || clase.professor.name.toLowerCase().includes(textSearch) || clase.title.toLowerCase().includes(textSearch)
+            return coincideLevel && TextCoincide
+        });
+
+    }, [level, search]);
 
     return(
         <View style ={[style.pantalla, {paddingTop: insets.top + spacing.md}]}>
             <View style={{flex:1, backgroundColor: '#fff', paddingHorizontal: 16, paddingTop:16}}>
-                <Text>English class booking application</Text>
-                <View>
+                <Text style={typography.title}>English Class Booking Application</Text>
+                
                 <Ionicons name="search" size={24} color={colors.surface}/>
                     <TextInput
-                    fontSize={20}
                     value={search}
                     onChangeText={setSearch}
                     placeholder="Enter your name to start the search"
                     autoCorrect= {false}
-                    autoComplete= {false}
                     />
                 {
                     search.length > 0 && (
@@ -56,7 +69,16 @@ export default function StartScreen ({navigation}){
                         ))
                     }
                 </ScrollView>
-            </View>
+                <FlatList
+                data={Resultados}
+                keyExtractor={(item)=> item.id}
+                renderItem={(item)=>(
+                    <Card
+                    clase={item}
+                    onPress={()=> navigation.navigate('ClassDetail', {clase:item})}
+                    />
+                )}
+                />
         </View>
     )
 }
