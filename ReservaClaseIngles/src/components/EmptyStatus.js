@@ -1,0 +1,40 @@
+import React from "react";
+import {View, Text, StyleSheet} from "react-native"
+import { Ionicons } from "@expo/vector-icons";
+import { colors, spacing } from "../theme";
+
+export default function EmptyStatus ({icono='calendar-outline', titulo, mensaje, OnAction}){
+    <View style={styles.contenedor}>
+        <View style={styles.circulo}>
+            <Ionicons name={icono} size={34} color={colors.surface}/>
+        </View>
+        <Text style={styles.titulo}>{titulo}</Text>
+        <Text style={styles.mensaje}>{mensaje} </Text>
+    </View>
+}
+
+const styles = StyleSheet.create({
+  contenedor: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: spacing.xxl,
+  },
+  circulo: {
+    width: 72,
+    height: 72,
+    borderRadius: 36,
+    backgroundColor: colors.surface,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: spacing.lg,
+  },
+  titulo: { fontSize: 17, fontWeight: '700', color: colors.texto, textAlign: 'center' },
+  mensaje: {
+    fontSize: 14,
+    color: colors.surface,
+    textAlign: 'center',
+    marginTop: spacing.sm,
+    lineHeight: 20,
+  },
+});

@@ -11,6 +11,7 @@ import card from '../components/Card';
 import { colors,radius, spacing,typography } from '../theme/index'
 import {formatPrice, CLASES, NIVELES} from '../data/clases'
 import Card from "../components/Card";
+import useResponsive from "../hooks/useResponsive";
 
 
 
@@ -78,6 +79,11 @@ export default function StartScreen ({navigation}){
                     onPress={()=> navigation.navigate('ClassDetail', {clase:item})}
                     />
                 )}
+                contentContainerStyle={{
+                    paddingHorizontal,
+                    flexGrow: 1
+                }}
+
                 />
         </View>
     )
