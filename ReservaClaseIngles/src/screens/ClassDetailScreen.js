@@ -26,14 +26,13 @@ export default function ClassDetailScreen ({route, navigation}){
             //Cupos
             //Horarios
             //Boton que se llame reservar clase
-            
+
             </ScrollView>
         </View>
         
     )
 }
 
----------Estilos DetalleClaseScreen.js------
 const styles = StyleSheet.create({
   pantalla: { flex: 1, backgroundColor: colors.fondo },
   portada: { width: '100%', backgroundColor: colors.primarioSuave },
