@@ -1,12 +1,12 @@
-export const NIVELES = ['All', 'Basic', 'Intermedium', 'Advanced', 'Conversational'];
+export const LEVELS = ['All', 'Basic', 'Intermedium', 'Advanced', 'Conversational'];
  
-export const CLASES = [
+export const CLASSES = [
   {
     id: '1',
-    title: 'Inglés desde cero',
+    title: 'English from Zero',
     level: 'Basic',
     description:
-      'Construye tus primeras frases, saludos y presentaciones personales. Ideal si nunca has estudiado inglés formalmente.',
+      'Build your first sentences, greetings, and personal introductions. Ideal if you have never studied English formally..',
     professor: { name: 'Laura Gómez', country: 'Colombia', photo: 'https://i.pravatar.cc/200?img=45' },
     image: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80',
     price: 32000,
@@ -14,14 +14,14 @@ export const CLASES = [
     modality: 'Virtual',
     rating: 4.8,
     slots: 6,
-    schedules: ['Lun 7:00 a.m.', 'Mié 7:00 a.m.', 'Vie 6:00 p.m.'],
+    schedules: ['Mon 7:00 a.m.', 'Wed 7:00 a.m.', 'Fri 6:00 p.m.'],
   },
   {
     id: '2',
-    title: 'Conversación cotidiana',
-    level: 'Conversacional',
+    title: 'Every day conversation',
+    level: 'Conversational',
     description:
-      'Práctica oral en grupos pequeños con temas del día a día: viajes, comida, trabajo y cultura.',
+      'Oral practice in small groups with everyday topics: travel, food, work and culture.',
     professor: { name: 'Michael Reed', country: 'Estados Unidos', photo: 'https://i.pravatar.cc/200?img=12' },
     image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=80',
     price: 45000,
@@ -29,29 +29,29 @@ export const CLASES = [
     modality: 'Virtual',
     rating: 4.9,
     slots: 4,
-    schedules: ['Mar 6:00 p.m.', 'Jue 6:00 p.m.', 'Sáb 10:00 a.m.'],
+    schedules: ['Tue 6:00 p.m.', 'Thu 6:00 p.m.', 'Sat 10:00 a.m.'],
   },
   {
     id: '3',
-    title: 'Inglés para entrevistas',
+    title: 'English for Interview',
     level: 'Advanced',
     description:
-      'Prepara tu hoja de vida, responde preguntas técnicas y practica entrevistas simuladas en inglés.',
+      'Prepare your resume, answer technical questions, and practice mock interviews in English..',
     professor: { name: 'Sofía Ramírez', country: 'México', photo: 'https://i.pravatar.cc/200?img=32' },
     image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80',
     price: 58000,
     duration: 60,
-    modality: 'Presencial',
+    modality: 'In Person',
     rating: 4.7,
     slots: 3,
-    schedules: ['Lun 8:00 p.m.', 'Mié 8:00 p.m.'],
+    schedules: ['Mon 8:00 p.m.', 'Wed 8:00 p.m.'],
   },
   {
     id: '4',
-    title: 'Gramática intermedia',
+    title: 'Intermediate Grammar',
     level: 'Intermedium',
     description:
-      'Tiempos verbales, condicionales y voz pasiva explicados con ejercicios prácticos y retroalimentación.',
+      'Verb tenses, conditionals and passive voice explained with practical exercises and feedback.',
     professor: { name: 'Andrés Villa', country: 'Colombia', photo: 'https://i.pravatar.cc/200?img=68' },
     image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=800&q=80',
     price: 38000,
@@ -59,14 +59,14 @@ export const CLASES = [
     modality: 'Virtual',
     rating: 4.6,
     slots: 8,
-    schedules: ['Mar 7:00 a.m.', 'Jue 7:00 a.m.', 'Sáb 9:00 a.m.'],
+    schedules: ['Tue 7:00 a.m.', 'Thu 7:00 a.m.', 'Sat 9:00 a.m.'],
   },
   {
     id: '5',
-    title: 'Pronunciación y acento',
+    title: 'Accent and pronunciation',
     level: 'Intermedium',
     description:
-      'Trabaja sonidos difíciles, entonación y ritmo para que te entiendan a la primera.',
+      'Work on difficult sounds, intonation, and rhythm so that you are understood the first time..',
     professor: { name: 'Emma Clarke', country: 'Reino Unido', photo: 'https://i.pravatar.cc/200?img=24' },
     image: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80',
     price: 42000,
@@ -74,29 +74,29 @@ export const CLASES = [
     modality: 'Virtual',
     rating: 4.9,
     slots: 5,
-    schedules: ['Lun 5:00 p.m.', 'Vie 5:00 p.m.'],
+    schedules: ['Mon 5:00 p.m.', 'Fri 5:00 p.m.'],
   },
   {
     id: '6',
     title: 'Business English',
     level: 'Advanced',
     description:
-      'Reuniones, correos y presentaciones corporativas. Vocabulario técnico y expresiones formales.',
+      'Corporate meetings, emails, and presentations. Technical vocabulary and formal expressions..',
     professor: { name: 'Daniel Ortiz', country: 'España', photo: 'https://i.pravatar.cc/200?img=59' },
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80',
     price: 65000,
     duration: 60,
-    modality: 'Presencial',
+    modality: 'In Person',
     rating: 4.8,
     slots: 4,
-    schedules: ['Mié 6:00 a.m.', 'Vie 6:00 a.m.'],
+    schedules: ['Wed 6:00 a.m.', 'Fri 6:00 a.m.'],
   },
   {
     id: '7',
-    title: 'Club de lectura en inglés',
+    title: 'Club of Reading in English',
     level: 'Conversational',
     description:
-      'Leemos cuentos cortos y los comentamos en voz alta. Amplía vocabulario sin memorizar listas.',
+      'We read short stories and discuss them aloud. Expand your vocabulary without memorizing lists.',
     professor: { name: 'Carolina Peña', country: 'Colombia', photo: 'https://i.pravatar.cc/200?img=47' },
     image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800&q=80',
     price: 28000,
@@ -104,14 +104,14 @@ export const CLASES = [
     modality: 'Virtual',
     rating: 4.5,
     slots: 10,
-    schedules: ['Jue 7:00 p.m.', 'Sáb 11:00 a.m.'],
+    schedules: ['Thu 7:00 p.m.', 'Sat 11:00 a.m.'],
   },
   {
     id: '8',
-    title: 'Inglés para viajar',
+    title: 'English for Travel',
     level: 'Basic',
     description:
-      'Aeropuerto, hotel, restaurante y emergencias. Frases listas para usar en tu próximo viaje.',
+      'Airport, hotel, restaurant, and emergencies. Ready-to-use phrases for your next trip.',
     professor: { name: 'Julián Mesa', country: 'Colombia', photo: 'https://i.pravatar.cc/200?img=51' },
     image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80',
     price: 30000,
@@ -119,7 +119,7 @@ export const CLASES = [
     modality: 'Virtual',
     rating: 4.7,
     slots: 7,
-    schedules: ['Mar 8:00 p.m.', 'Sáb 8:00 a.m.'],
+    schedules: ['Tue 8:00 p.m.', 'Sat 8:00 a.m.'],
   },
 ];
  

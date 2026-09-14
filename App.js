@@ -10,11 +10,8 @@ export default function App() {
   
   return (
     <SafeAreaProvider>
-      <SafeAreaView>
-        <Text> MENU </Text>
-      </SafeAreaView>
       <NavigationContainer>
-        <StatusBar style="light"/>
+        <StatusBar style="dark"/>
           <StackClass/>
       </NavigationContainer>
     </SafeAreaProvider>

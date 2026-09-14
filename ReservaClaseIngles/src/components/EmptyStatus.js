@@ -3,34 +3,35 @@ import {View, Text, StyleSheet} from "react-native"
 import { Ionicons } from "@expo/vector-icons";
 import { colors, spacing } from "../theme";
 
-export default function EmptyStatus ({icono='calendar-outline', titulo, mensaje, OnAction}){
-    <View style={styles.contenedor}>
-        <View style={styles.circulo}>
-            <Ionicons name={icono} size={34} color={colors.surface}/>
+export default function EmptyStatus ({icon='calendar-outline',title, message, onAction}){
+    return(
+    <View style={styles.container}>
+        <View style={styles.circle}>
+            <Ionicons name={icon} size={34} color={colors.text}/>
         </View>
-        <Text style={styles.titulo}>{titulo}</Text>
-        <Text style={styles.mensaje}>{mensaje} </Text>
+        <Text style={styles.title}>{title}</Text>
+        <Text style={styles.message}>{message} </Text>
     </View>
-}
+)}
 
 const styles = StyleSheet.create({
-  contenedor: {
+  container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
     padding: spacing.xxl,
   },
-  circulo: {
+  circle: {
     width: 72,
     height: 72,
     borderRadius: 36,
-    backgroundColor: colors.surface,
+    backgroundColor: colors.text,
     alignItems: 'center',
     justifyContent: 'center',
     marginBottom: spacing.lg,
   },
-  titulo: { fontSize: 17, fontWeight: '700', color: colors.texto, textAlign: 'center' },
-  mensaje: {
+  title: { fontSize: 17, fontWeight: '700', color: colors.text, textAlign: 'center' },
+  message: {
     fontSize: 14,
     color: colors.surface,
     textAlign: 'center',
